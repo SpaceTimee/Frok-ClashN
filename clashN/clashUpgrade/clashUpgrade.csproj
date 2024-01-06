@@ -7,5 +7,9 @@
     <FileVersion>1.1.0.0</FileVersion>
 	<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 	<BaseOutputPath>..\clashN\bin</BaseOutputPath>
+	<ApplicationIcon>ClashNUpgrade.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ClashNUpgrade.ico" />
+  </ItemGroup>
 </Project>

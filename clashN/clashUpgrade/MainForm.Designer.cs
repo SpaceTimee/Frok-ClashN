@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             ExitBtn = new System.Windows.Forms.Button();
             UpgradeBtn = new System.Windows.Forms.Button();
             CnTip = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@
             Controls.Add(CnTip);
             Controls.Add(ExitBtn);
             Controls.Add(UpgradeBtn);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "MainForm";
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
