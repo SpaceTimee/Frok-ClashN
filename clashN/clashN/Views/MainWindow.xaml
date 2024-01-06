@@ -10,7 +10,7 @@
     xmlns:conv="clr-namespace:ClashN.Converters"
     xmlns:resx="clr-namespace:ClashN.Resx"
     xmlns:vms="clr-namespace:ClashN.ViewModels"
-    Title="ClashN"
+    Title="Frok ClashN"
     Width="1000"
     Height="550"
     MinHeight="550"

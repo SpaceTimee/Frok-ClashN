@@ -6,22 +6,22 @@ namespace ClashN
     {
         public static void Show(string msg)
         {
-            MessageBox.Show(msg, "ClashN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(msg, "Frok ClashN", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static void ShowWarning(string msg)
         {
-            MessageBox.Show(msg, "ClashN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(msg, "Frok ClashN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         public static void ShowError(string msg)
         {
-            MessageBox.Show(msg, "ClashN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(msg, "Frok ClashN", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         public static DialogResult ShowYesNo(string msg)
         {
-            return MessageBox.Show(msg, "ClashN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            return MessageBox.Show(msg, "Frok ClashN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         }
 
         //public static string GetResourseString(string key)
