@@ -1,0 +1,36 @@
+name: 'Upstream Sync'
+
+on:
+  schedule:
+    - cron:  '0 * * * *'  # run per hour
+
+  workflow_dispatch:  # click the button on Github repo!
+
+jobs:
+  sync_latest_from_upstream:
+    runs-on: ubuntu-latest
+    name: Sync latest commits from upstream repo
+
+    steps:
+    # Step 1: Checkout the target repo
+    - name: Target repo checkout
+      uses: actions/checkout@v3
+
+    # Step 2: Run the sync action
+    - name: Sync upstream run
+      id: sync
+      uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+      with:
+        target_sync_branch: main
+        target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+        upstream_sync_repo: 2dust/clashN
+        upstream_sync_branch: main
+
+        test_mode: true
+      
+    # Step 3: Check the sync action
+    - name: Sync upstream check
+      if: failure()
+      run: |
+        echo "Error"
+        exit 1
