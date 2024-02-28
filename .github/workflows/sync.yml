@@ -26,7 +26,7 @@ jobs:
         upstream_sync_repo: 2dust/clashN
         upstream_sync_branch: main
 
-        test_mode: true
+        test_mode: false
       
     # Step 3: Check the sync action
     - name: Sync upstream check
