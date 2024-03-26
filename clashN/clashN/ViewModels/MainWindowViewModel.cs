@@ -251,8 +251,8 @@ namespace ClashN.ViewModels
             catch { }
             finally
             {
-                Application.Current.Shutdown();
                 Environment.Exit(0);
+                Process.GetCurrentProcess().Kill();
             }
         }
 

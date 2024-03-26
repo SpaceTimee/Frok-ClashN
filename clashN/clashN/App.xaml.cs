@@ -19,9 +19,7 @@ namespace ClashN
             ProgramStarted = new EventWaitHandle(false, EventResetMode.AutoReset, "ProgramStartedEvent", out bool bCreatedNew);
             if (!bCreatedNew)
             {
-                MessageBox.Show($"Frok ClashN is already running{Environment.NewLine}(Frok ClashN 已在运行中)", "Frok ClashN", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                ProgramStarted.Close();
+                ProgramStarted.Set();
                 Environment.Exit(-1);
             }
         }
@@ -65,7 +63,6 @@ namespace ClashN
             if (ConfigProc.LoadConfig(ref _config) != 0)
             {
                 UI.ShowWarning($"Loading GUI configuration file is abnormal,please restart the application{Environment.NewLine}加载GUI配置文件异常,请重启应用");
-                Application.Current.Shutdown();
                 Environment.Exit(0);
                 return;
             }
