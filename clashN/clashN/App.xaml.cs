@@ -3,6 +3,9 @@ using System.Windows.Threading;
 using ClashN.Handler;
 using ClashN.Mode;
 using ClashN.Tool;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Threading;
 
 namespace ClashN
 {
@@ -85,6 +88,12 @@ namespace ClashN
         private void TaskScheduler_UnobservedTaskException(object? sender, UnobservedTaskExceptionEventArgs e)
         {
             Utils.SaveLog("TaskScheduler_UnobservedTaskException", e.Exception);
+        }
+        protected override void OnExit(ExitEventArgs e)
+        {
+            Utils.SaveLog("OnExit");
+            base.OnExit(e);
+            Process.GetCurrentProcess().Kill();
         }
     }
 }
