@@ -1,4 +1,6 @@
-# Frok ClashN
+> 由于[上游项目](https://github.com/2dust/clashN)并入 V2rayN，本项目也不再更新
+
+# ClashN
 A clash client for Windows, supports [Mihomo core](https://github.com/MetaCubeX/Mihomo)
   
 ### How to use
